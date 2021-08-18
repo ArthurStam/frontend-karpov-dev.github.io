@@ -129,10 +129,6 @@ body {
 .main-article__caption {
     margin: 28px 0 0;
     display: block;
-    font-size: 20px;
-    font-weight: 500;
-    color: #868686;
-    text-transform: uppercase;
 }
 
 .small-article {
@@ -151,23 +147,139 @@ body {
     font-weight: 700;
 }
 
-.small-article__date,
-.small-article__caption {
+.article-date,
+.article-source {
     font-size: 20px;
     font-weight: 500;
     text-transform: uppercase;
 }
 
-.small-article__date {
+.article-date {
     color: #FF5533;
 }
 
-.small-article__caption {
+.article-source {
     color: #868686;
 }
 
-.small-article__caption::before {
+.article-date + .article-source::before {
     content: " • ";
+}
+
+.articles__hero {
+    grid-column: span 8;
+}
+
+.articles__trends {
+    grid-column: 10 / -1;
+}
+
+.articles__trends-title {
+    margin: 0 0 25px;
+    font-weight: 900;
+    font-size: 50px;
+    line-height: 59px;
+    text-transform: uppercase;
+}
+
+.hero__img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 920 / 650;
+    object-fit: cover;
+    background-color: #ccc;
+}
+
+.hero__content {
+    background: #262A2F;
+    color: #fff;
+    position: relative;
+    left: 20px;
+    top: -115px;
+    padding: 23px 11px;
+}
+
+.hero__title {
+    margin: 0 0 15px;
+    font-size: 50px;
+    font-weight: 900;
+    line-height: 59px;
+    text-transform: uppercase;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.hero__text {
+    margin: 0;
+    font-size: 22px;
+    line-height: 26.07px;
+    font-weight: 400;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.articles__main-news {
+    grid-column: span 7;
+}
+
+.main-news {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-gap: 20px;
+    position: relative;
+}
+
+.main-news:not(:last-child) {
+    margin-bottom: 34px;
+}
+
+.main-news__media {
+    grid-column: span 3;
+}
+
+.main-news__img {
+    width: 100%;
+    display: block;
+    height: 100%;
+    object-fit: cover;
+    background-color: #ccc;
+}
+
+.main-news__content {
+    grid-column: 4 / -1;
+}
+
+.main-news__title {
+    margin: 0;
+    left: 120px;
+    top: -38px;
+    position: absolute;
+    font-weight: 900;
+    font-size: 50px;
+    line-height: 59px;
+    text-transform: uppercase;
+}
+
+.main-news__title::after {
+    content: '';
+    display: block;
+    height: 10px;
+    background-color: #262A2F;
+    position: absolute;
+    width: 100%;
+    left: 135px;
+    bottom: -4px;
+}
+
+.main-news__text {
+    margin-top: 52px;
+    margin-bottom: 20px;
+    font-size: 22px;
+    line-height: 26px;
 }
 
 .footer {
